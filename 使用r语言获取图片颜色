@@ -1,0 +1,14 @@
+# 使用r语言获取图片颜色
+# 安装并加载必要的包
+install.packages("RImagePalette")
+library(RImagePalette)
+
+# 读取PNG图片
+image <- load.image("C:/Users/aiKun/Downloads/1.png")  # 替换为你的图片路径
+display(image)
+
+# 使用 ImagePalette 提取图片中的颜色
+palette <- image_palette(image, n = 5)  # n 为提取的颜色数量
+
+# 展示提取的颜色
+scales::show_col(palette)  
